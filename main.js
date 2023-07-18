@@ -11,7 +11,7 @@ form.addEventListener('submit', function (e){
     const mensagemFracasso = `Infelizmente as idades estão erradas pois sua idade, <b>${numeroA.value}</b> anos, está maior que a idade de sua mãe, <b>${numeroB.value}</b> anos.`;
 
     formEValido
-    if ((numeroB.value) > (numeroA.value)) {
+    if (parseInt(numeroB.value) > parseInt(numeroA.value)) {
         const containerMensagemSucesso = document.querySelector('.sucess-message');
         containerMensagemSucesso.innerHTML = mensagemSucesso;
         containerMensagemSucesso.style.display = 'block';
@@ -22,7 +22,6 @@ form.addEventListener('submit', function (e){
         const containerMensagemFracasso = document.querySelector('.failure-message');
         containerMensagemFracasso.innerHTML = mensagemFracasso;
         containerMensagemFracasso.style.display = 'none';
-
 
 
     } else {
